@@ -7,7 +7,7 @@ public class RotateMap : MonoBehaviour
     public GameObject Map;
 
     public float angle = 90;
-    public float RotationSpeed = 0.000001f;
+    public float RotationSpeed = 0.001f;
     public Quaternion wantedRotation;
 
     // Start is called before the first frame update
@@ -48,6 +48,6 @@ public class RotateMap : MonoBehaviour
             //Map.transform.Rotate(0, 0, -angle);
             wantedRotation = Quaternion.Euler(Vector3.forward * angle);
         }
-        transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * RotationSpeed);
+        transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.time * RotationSpeed);
     }
 }
