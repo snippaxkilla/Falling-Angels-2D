@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Coin
   - Goal
-  - LaunchPad
   layers:
   - Default
   - TransparentFX
