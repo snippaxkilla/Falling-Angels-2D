@@ -2298,9 +2298,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 1222684742}
-  angle: 90
-  RotationSpeed: 0.001
-  wantedRotation: {x: 0, y: 0, z: 0, w: 0}
+  target: {fileID: 1222684744}
+  rotateTime: 3
+  rotateDegrees: 90
 --- !u!4 &1222684744
 Transform:
   m_ObjectHideFlags: 0
