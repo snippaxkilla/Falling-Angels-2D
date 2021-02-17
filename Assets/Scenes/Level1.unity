@@ -471,9 +471,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 390762822}
-  angle: 90
-  RotationSpeed: 0.001
-  wantedRotation: {x: 0, y: 0, z: 0, w: 0}
+  target: {fileID: 0}
+  currentRotation: {x: 0, y: 0, z: 0}
+  rotate: {x: 0, y: 0, z: 0}
+  rotationDegrees: 0
+  rotationSpeed: 0
 --- !u!1 &502944537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8e7c1cecb99b14088d07871c8707ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotate: {fileID: 390762824}
+  levelCount: 0
 --- !u!1 &1677974363
 GameObject:
   m_ObjectHideFlags: 0

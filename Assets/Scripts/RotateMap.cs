@@ -5,20 +5,31 @@ using UnityEngine;
 public class RotateMap : MonoBehaviour
 {
     public GameObject Map;
+    public Transform target;
+    public Vector3 currentRotation;
+    public Vector3 rotate;
+    public float rotationDegrees;
+    public float rotationSpeed;
+
 
     /* don't delete!!!!!!!!!!
     public float angle = 90;
     public float RotationSpeed = 0.01f;
-    public Quaternion wantedRotation;*/
+    public Quaternion wantedRotation;
     public Transform target;
     public float rotateTime = 2.0f;
     public float rotateDegrees = 90.0f;
     private bool rotating = false;
+    */
     
     // Start is called before the first frame update
     void Start()
     {
+        target = GetComponent<Transform>();
         Map = GameObject.Find("Map");
+
+        this.target.eulerAngles = currentRotation;
+        
         /* don't delete!!!!!!!!!!
         wantedRotation = Quaternion.LookRotation(Map.transform.position);
         */
@@ -66,42 +77,81 @@ public class RotateMap : MonoBehaviour
 
         void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && !rotating)
+        /*  if (Input.GetKeyDown(KeyCode.RightArrow) && !rotating)
+          {
+              StartCoroutine(Rotate(transform, target, Vector3.forward, rotateDegrees, rotateTime));
+          }
+
+          if (Input.GetKeyDown(KeyCode.LeftArrow) && !rotating)
+          {
+              StartCoroutine(Rotate(transform, target, Vector3.forward, -rotateDegrees, rotateTime));
+          }
+        */
+
+
+
+        //rotate = Vector3.forward * (Mathf.Abs(rotationDegrees) * Mathf.Rad2Deg);
+
+        currentRotation = rotate;
+        rotationSpeed = 45;
+
+        if(Input.GetKey(KeyCode.RightArrow))
         {
-            StartCoroutine(Rotate(transform, target, Vector3.forward, rotateDegrees, rotateTime));
+
+             rotationDegrees += 0.0174533f * Time.deltaTime * rotationSpeed;
+            
+            rotate = Vector3.forward * (Mathf.Abs(rotationDegrees) * Mathf.Rad2Deg);
+
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !rotating)
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            StartCoroutine(Rotate(transform, target, Vector3.forward, -rotateDegrees, rotateTime));
+            rotationDegrees -= 0.0174533f * Time.deltaTime * rotationSpeed;
+
+            rotate = Vector3.forward * (Mathf.Abs(rotationDegrees) * Mathf.Rad2Deg);
+
+            if(rotate.z<= 0)
+            {
+
+                rotate = Vector3.back * (Mathf.Abs(rotationDegrees) * Mathf.Rad2Deg);
+
+            }
         }
+
+        this.target.eulerAngles = currentRotation;
+
+        Debug.Log(rotate);
+
+
+
     }
 
-    private IEnumerator Rotate(Transform camTransform, Transform targetTransform, Vector3 rotateAxis, float degrees, float totalTime)
-    {
-        if (rotating)
-            yield return null;
-        rotating = true;
+    /* private IEnumerator Rotate(Transform camTransform, Transform targetTransform, Vector3 rotateAxis, float degrees, float totalTime)
+     {
+         if (rotating)
+             yield return null;
+         rotating = true;
 
-        Quaternion startRotation = camTransform.rotation;
-        Vector3 startPosition = camTransform.position;
-        // Get end position;
-        transform.RotateAround(targetTransform.position, rotateAxis, degrees);
-        Quaternion endRotation = camTransform.rotation;
-        Vector3 endPosition = camTransform.position;
-        camTransform.rotation = startRotation;
-        camTransform.position = startPosition;
+         Quaternion startRotation = camTransform.rotation;
+         Vector3 startPosition = camTransform.position;
+         // Get end position;
+         transform.RotateAround(targetTransform.position, rotateAxis, degrees);
+         Quaternion endRotation = camTransform.rotation;
+         Vector3 endPosition = camTransform.position;
+         camTransform.rotation = startRotation;
+         camTransform.position = startPosition;
 
-        float rate = degrees / totalTime;
-        //Start Rotate
-        for (float i = 0.0f; Mathf.Abs(i) < Mathf.Abs(degrees); i += Time.deltaTime * rate)
-        {
-            camTransform.RotateAround(targetTransform.position, rotateAxis, Time.deltaTime * rate);
-            yield return null;
-        }
+         float rate = degrees / totalTime;
+         //Start Rotate
+         for (float i = 0.0f; Mathf.Abs(i) < Mathf.Abs(degrees); i += Time.deltaTime * rate)
+         {
+             camTransform.RotateAround(targetTransform.position, rotateAxis, Time.deltaTime * rate);
+             yield return null;
+         }
 
-        camTransform.rotation = endRotation;
-        camTransform.position = endPosition;
-        rotating = false;
-    }
+         camTransform.rotation = endRotation;
+         camTransform.position = endPosition;
+         rotating = false;
+     }
+    */
 }

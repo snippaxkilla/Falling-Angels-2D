@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class DevilBehaviour : MonoBehaviour
 {
+    public RotateMap rotate;
+    public int levelCount = 0;
+    
 
 
     private void Update()
@@ -24,13 +27,18 @@ public class DevilBehaviour : MonoBehaviour
 
         if(Other.gameObject.CompareTag("Goal"))
         {
+
+            levelCount++;
+            Debug.Log(levelCount);
             resetGame();
-            Debug.Log("help");
+
         }
     }
 
     void resetGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(1+ levelCount);
+        rotate.rotationDegrees = 0;
+
     }
 }
