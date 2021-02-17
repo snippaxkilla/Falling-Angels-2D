@@ -22,6 +22,11 @@ public class DevilBehaviour : MonoBehaviour
             Destroy(Other.gameObject);
         }
 
+        if(Other.gameObject.CompareTag("DeathPlane"))
+        {
+            Debug.Log("You Died");
+        }
+
         if(Other.gameObject.CompareTag("Goal"))
         {
             resetGame();
