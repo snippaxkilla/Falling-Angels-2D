@@ -43,7 +43,5 @@ public class DevilBehaviour : MonoBehaviour
     void resetGame()
     {
         SceneManager.LoadScene(1+ levelCount);
-        rotate.rotationDegrees = 0;
-
     }
 }
