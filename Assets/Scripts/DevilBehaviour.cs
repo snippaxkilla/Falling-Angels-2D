@@ -30,7 +30,17 @@ public class DevilBehaviour : MonoBehaviour
             Debug.Log("You Died");
         }
 
-        if(Other.gameObject.CompareTag("Goal"))
+        /*if(Other.gameObject.CompareTag("RedPortal"))
+        {
+            transform.position = new Vector3(currentBluePortalPosition && retain velocity?)
+        }*/
+
+        /*if (Other.gameObject.CompareTag("BluePortal"))
+        {
+            transform.position = new Vector3(currentRedPortalPosition && retain velocity ?);
+        }*/
+
+        if (Other.gameObject.CompareTag("Goal"))
         {
 
             levelCount++;
