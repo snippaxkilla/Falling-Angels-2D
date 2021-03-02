@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateMap : MonoBehaviour
 {
     public GameObject Map;
-    public float Speed = 80;
+    public float Speed = 200;
 
     
     // Start is called before the first frame update
