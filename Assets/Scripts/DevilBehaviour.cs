@@ -15,7 +15,7 @@ public class DevilBehaviour : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            resetGame();
+            ResetGame();
         }
     }
     void OnTriggerEnter2D(Collider2D Other)
@@ -25,7 +25,13 @@ public class DevilBehaviour : MonoBehaviour
             Destroy(Other.gameObject);
         }
 
-        if(Other.gameObject.CompareTag("DeathPlane"))
+     if (Other.gameObject.CompareTag("Spikes"))
+        {
+            ResetGame();
+            Debug.Log("hit spike");
+        }
+
+        if (Other.gameObject.CompareTag("DeathPlane"))
         {
             Debug.Log("You Died");
         }
@@ -42,15 +48,21 @@ public class DevilBehaviour : MonoBehaviour
 
         if (Other.gameObject.CompareTag("Goal"))
         {
-
             levelCount++;
             Debug.Log(levelCount);
-            resetGame();
-
+            ResetGame();
         }
     }
 
-    void resetGame()
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Spikes"))
+        {
+            ResetGame();    
+        }
+    }
+
+    void ResetGame()
     {
         SceneManager.LoadScene(1+ levelCount);
     }

@@ -9,6 +9,7 @@ TagManager:
   - DeathPlane
   - RedPortal
   - BluePortal
+  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2691743165
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Traps
+    uniqueID: 1446338339
+    locked: 0
+  - name: Platforms Back
+    uniqueID: 2812300075
+    locked: 0
+  - name: Platforms Front
+    uniqueID: 3000889633
+    locked: 0
+  - name: Coins
+    uniqueID: 2128399517
+    locked: 0
+  - name: Player
+    uniqueID: 2448603677
+    locked: 0
+  - name: UI Background
+    uniqueID: 940792913
+    locked: 0
+  - name: UI Front
+    uniqueID: 3577362339
     locked: 0

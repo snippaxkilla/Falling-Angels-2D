@@ -14,14 +14,8 @@ public class StartGame : MonoBehaviour
         button.onClick.AddListener(Task);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void Task()
     {
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadScene("LevelSelector");
     }
 }

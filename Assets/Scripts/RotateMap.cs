@@ -7,13 +7,6 @@ public class RotateMap : MonoBehaviour
     public GameObject Map;
     public float Speed = 200;
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        Map = GameObject.Find("Map");
-    }
-
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
