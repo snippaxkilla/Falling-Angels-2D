@@ -36,6 +36,11 @@ public class DevilBehaviour : MonoBehaviour
             Debug.Log("You Died");
         }
 
+        if (Other.gameObject.CompareTag("Lava"))
+        {
+            Debug.Log("You fell in lava");
+            ResetGame();
+        }
         /*if(Other.gameObject.CompareTag("RedPortal"))
         {
             transform.position = new Vector3(currentBluePortalPosition && retain velocity?)
