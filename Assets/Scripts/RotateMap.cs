@@ -6,6 +6,7 @@ public class RotateMap : MonoBehaviour
 {
     public GameObject Map;
     public float Speed = 200;
+    public float Offset = 0.2f;
 
     private void Update()
     {
@@ -16,6 +17,21 @@ public class RotateMap : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             Map.transform.Rotate(0, 0, -Time.deltaTime * Speed);
+        }
+        AccelerometerMove();
+    }
+
+    private void AccelerometerMove()
+    {
+        float PhoneRotationX = Input.acceleration.x;
+
+        if (PhoneRotationX > Offset) 
+        {
+            Map.transform.Rotate(0, 0, -Time.deltaTime * Speed);
+        }
+        if (PhoneRotationX < -Offset)
+        {
+            Map.transform.Rotate(0, 0, Time.deltaTime * Speed);
         }
     }
 }

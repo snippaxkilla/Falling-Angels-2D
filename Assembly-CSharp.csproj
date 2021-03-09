@@ -64,11 +64,12 @@
     <Compile Include="Assets\Scripts\TallySystem.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\LevelSelectorManager.cs" />
     <Compile Include="Assets\Scripts\WinCondition.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\PlatformRotator.cs" />
     <Compile Include="Assets\Scripts\RotateMap.cs" />
-    <Compile Include="Assets\Scripts\LevelSelectorManager.cs" />
+    <Compile Include="Assets\Scripts\GyroManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
