@@ -10,7 +10,8 @@ public class PortalBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        RedPortal = GameObject.Find("RedPortal");
+        BluePortal = GameObject.Find("BluePortal");
     }
 
     // Update is called once per frame
@@ -23,7 +24,8 @@ public class PortalBehavior : MonoBehaviour
     {
         if (RedPortal.gameObject.CompareTag("Player"))
         {
-            Other.transform.position = new Vector3(0,0,0);
+            Other.transform.position = new Vector3(0, 0, 0);
+            Debug.Log("0");
         }
 
         if (BluePortal.gameObject.CompareTag("Player"))

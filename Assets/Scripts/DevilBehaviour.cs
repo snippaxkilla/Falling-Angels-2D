@@ -7,15 +7,37 @@ using UnityEngine.SceneManagement;
 public class DevilBehaviour : MonoBehaviour
 {
     public RotateMap rotate;
-    public int levelCount = 0;
+    public GameObject RedPortal, BluePortal;
+    public int levelCount = 0, transportTimer = 0, transportSeconds = 20;
+    public Vector3 currentRedPortalPosition, currentBluePortalPosition;
+    private bool transported = false;
     
 
-
+    void Start()
+    {
+        RedPortal = GameObject.Find("RedPortal");
+        BluePortal = GameObject.Find("BluePortal");
+    }
     private void Update()
     {
+        Debug.Log(transform.position);
+
+        currentRedPortalPosition = RedPortal.transform.position;
+        currentBluePortalPosition = BluePortal.transform.position;
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             ResetGame();
+        }
+
+        if(transported)
+        {
+            transportTimer++;
+            if (transportTimer >= transportSeconds)
+            {
+                transported = false;
+                transportTimer = 0;
+            }
         }
     }
     void OnTriggerEnter2D(Collider2D Other)
@@ -25,7 +47,7 @@ public class DevilBehaviour : MonoBehaviour
             Destroy(Other.gameObject);
         }
 
-     if (Other.gameObject.CompareTag("Spikes"))
+        if (Other.gameObject.CompareTag("Spikes"))
         {
             ResetGame();
             Debug.Log("hit spike");
@@ -36,20 +58,26 @@ public class DevilBehaviour : MonoBehaviour
             Debug.Log("You Died");
         }
 
+
         if (Other.gameObject.CompareTag("Lava"))
         {
             Debug.Log("You fell in lava");
             ResetGame();
         }
-        /*if(Other.gameObject.CompareTag("RedPortal"))
-        {
-            transform.position = new Vector3(currentBluePortalPosition && retain velocity?)
-        }*/
+        
 
-        /*if (Other.gameObject.CompareTag("BluePortal"))
+        if(!transported && Other.gameObject.CompareTag("RedPortal"))
+
         {
-            transform.position = new Vector3(currentRedPortalPosition && retain velocity ?);
-        }*/
+            transform.position = currentBluePortalPosition;
+            transported = true;
+        }
+
+        if (!transported && Other.gameObject.CompareTag("BluePortal"))
+        {
+            transform.position = currentRedPortalPosition;
+            transported = true;
+        }
 
         if (Other.gameObject.CompareTag("Goal"))
         {
