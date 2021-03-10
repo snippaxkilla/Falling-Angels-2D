@@ -2783,6 +2783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Map: {fileID: 1910613926}
   Speed: 80
+  Offset: 0.5
 --- !u!4 &1910613928
 Transform:
   m_ObjectHideFlags: 0
