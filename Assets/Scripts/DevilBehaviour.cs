@@ -8,7 +8,7 @@ public class DevilBehaviour : MonoBehaviour
 {
     public RotateMap rotate;
     public GameObject RedPortal, BluePortal;
-    public int levelCount = 0, transportTimer = 0, transportSeconds = 20;
+    public int transportTimer = 0, transportSeconds = 20;
     public Vector3 currentRedPortalPosition, currentBluePortalPosition;
     private bool transported = false;
     
@@ -20,10 +20,13 @@ public class DevilBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
-        currentRedPortalPosition = RedPortal.transform.position;
-        currentBluePortalPosition = BluePortal.transform.position;
+        if (RedPortal && BluePortal)
+        {
+            currentRedPortalPosition = RedPortal.transform.position;
+            currentBluePortalPosition = BluePortal.transform.position;
+        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -72,9 +75,8 @@ public class DevilBehaviour : MonoBehaviour
 
         if (Other.gameObject.CompareTag("Goal"))
         {
-            levelCount++;
-            Debug.Log(levelCount);
-            ResetGame();
+            var currentLevel = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
+            FindObjectOfType<LevelSelectorManager>().GoToLevel(currentLevel + 1);
         }
     }
 
@@ -88,6 +90,6 @@ public class DevilBehaviour : MonoBehaviour
 
     void ResetGame()
     {
-        SceneManager.LoadScene(1+ levelCount);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -5,21 +5,17 @@ using UnityEngine.UI;
 
 public class TallySystem : MonoBehaviour
 {
-    public static TallySystem instance;
-    public Text text;
-    int score;
-    // Start is called before the first frame update
-    void Start()
+    private Text scoreText;
+    private int score;
+
+    private void Start()
     {
-        if(instance == null) {
-            instance = this;
-        }
+        scoreText = GetComponent<Text>();     
     }
 
-    public void ChangeScore(int CoinValue)
+    public void AddScore(int CoinValue)
     {
         score += CoinValue;
-        text.text = "Coins: " + score.ToString();
+        scoreText.text = "Coins: " + score.ToString();
     }
-   
 }

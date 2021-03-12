@@ -9,7 +9,7 @@ public class CoinBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            TallySystem.instance.ChangeScore(coinValue);
+            FindObjectOfType<TallySystem>().AddScore(coinValue);
         }
     }
 }

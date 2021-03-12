@@ -5,9 +5,9 @@ using UnityEngine;
 public class RotateMap : MonoBehaviour
 {
     public GameObject Map;
-    public float Speed = 200;
-    public float Offset = 0.2f;
-
+    public float Speed = 300f;
+    public float Margin = 0.05f;
+ 
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -25,13 +25,9 @@ public class RotateMap : MonoBehaviour
     {
         float PhoneRotationX = Input.acceleration.x;
 
-        if (PhoneRotationX > Offset) 
+        if (Mathf.Abs(PhoneRotationX) > Margin) 
         {
-            Map.transform.Rotate(0, 0, -Time.deltaTime * Speed);
-        }
-        if (PhoneRotationX < -Offset)
-        {
-            Map.transform.Rotate(0, 0, Time.deltaTime * Speed);
+            Map.transform.Rotate(0, 0, -Time.deltaTime * PhoneRotationX * Speed);
         }
     }
 }
