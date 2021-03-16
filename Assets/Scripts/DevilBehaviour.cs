@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 public class DevilBehaviour : MonoBehaviour
 {
     public RotateMap rotate;
-    public GameObject RedPortal, BluePortal;
+    public GameObject RedPortal, BluePortal, DissapearingWall;
     public int transportTimer = 0, transportSeconds = 20;
     public Vector3 currentRedPortalPosition, currentBluePortalPosition;
     private bool transported = false;
     public Rigidbody2D rBody;
     public bool launchpadActive = false;
     public float launchpadTimer;
+
     
 
     void Start()
@@ -21,6 +22,7 @@ public class DevilBehaviour : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         RedPortal = GameObject.Find("RedPortal");
         BluePortal = GameObject.Find("BluePortal");
+        DissapearingWall = GameObject.Find("Dissapearingwall");
     }
     private void Update()
     {
@@ -108,6 +110,10 @@ public class DevilBehaviour : MonoBehaviour
         if(Other.gameObject.CompareTag("Inverterpad"))
         {
             rotate.Speed = rotate.Speed * -1;
+        }
+        if(Other.gameObject.CompareTag("Pressurepad"))
+        {
+            DissapearingWall.SetActive(false);
         }
     }
 

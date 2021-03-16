@@ -12,6 +12,8 @@ TagManager:
   - Spikes
   - Launchpad
   - Inverterpad
+  - Dissapearingwall
+  - Pressurepad
   layers:
   - Default
   - TransparentFX
