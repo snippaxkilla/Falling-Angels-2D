@@ -11,10 +11,14 @@ public class DevilBehaviour : MonoBehaviour
     public int transportTimer = 0, transportSeconds = 20;
     public Vector3 currentRedPortalPosition, currentBluePortalPosition;
     private bool transported = false;
+    public Rigidbody2D rBody;
+    public bool launchpadActive = false;
+    public float launchpadTimer;
     
 
     void Start()
     {
+        rBody = GetComponent<Rigidbody2D>();
         RedPortal = GameObject.Find("RedPortal");
         BluePortal = GameObject.Find("BluePortal");
     }
@@ -41,6 +45,23 @@ public class DevilBehaviour : MonoBehaviour
                 transported = false;
                 transportTimer = 0;
             }
+        }
+
+        if(launchpadActive == true)
+        {
+            launchpadTimer += Time.deltaTime * 1;
+            rBody.gravityScale = -0.8f;
+            if(launchpadTimer >= 2)
+            {
+                launchpadActive = false;
+                launchpadTimer = 0;
+            }
+
+        }
+
+        else 
+        {
+            rBody.gravityScale = 0.8f;
         }
     }
     void OnTriggerEnter2D(Collider2D Other)
@@ -78,6 +99,16 @@ public class DevilBehaviour : MonoBehaviour
             var currentLevel = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
             FindObjectOfType<LevelSelectorManager>().GoToLevel(currentLevel + 1);
         }
+
+        if(Other.gameObject.CompareTag("Launchpad"))
+        {
+            launchpadActive = true;
+        }
+
+        if(Other.gameObject.CompareTag("Inverterpad"))
+        {
+            rotate.Speed = rotate.Speed * -1;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -86,6 +117,7 @@ public class DevilBehaviour : MonoBehaviour
         {
             ResetGame();    
         }
+        
     }
 
     void ResetGame()

@@ -10,6 +10,8 @@ TagManager:
   - RedPortal
   - BluePortal
   - Spikes
+  - Launchpad
+  - Inverterpad
   layers:
   - Default
   - TransparentFX
