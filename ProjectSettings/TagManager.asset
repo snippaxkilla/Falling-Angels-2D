@@ -10,9 +10,10 @@ TagManager:
   - RedPortal
   - BluePortal
   - Spikes
-  - RotatingSaw
-  - RightBound
-  - LeftBound
+  - Launchpad
+  - Inverterpad
+  - Dissapearingwall
+  - Pressurepad
   layers:
   - Default
   - TransparentFX
