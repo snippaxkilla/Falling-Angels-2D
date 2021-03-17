@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class DevilBehaviour : MonoBehaviour
 {
-    public RotateMap rotate;
-    public GameObject RedPortal, BluePortal;
-    public int levelCount = 0, transportTimer = 0, transportSeconds = 20;
-    public Vector3 currentRedPortalPosition, currentBluePortalPosition;
+    private RotateMap rotate;
+    private GameObject RedPortal, BluePortal;
+    private int transportTimer = 0, transportSeconds = 20;
+    private Vector3 currentRedPortalPosition, currentBluePortalPosition;
     private bool transported = false;
     
 
@@ -20,10 +20,13 @@ public class DevilBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
-        currentRedPortalPosition = RedPortal.transform.position;
-        currentBluePortalPosition = BluePortal.transform.position;
+        if (RedPortal && BluePortal)
+        {
+            currentRedPortalPosition = RedPortal.transform.position;
+            currentBluePortalPosition = BluePortal.transform.position;
+        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -53,9 +56,14 @@ public class DevilBehaviour : MonoBehaviour
             Debug.Log("hit spike");
         }
 
+        if (Other.gameObject.CompareTag("RotatingSaw"))
+        {
+            ResetGame();
+        }
+
         if (Other.gameObject.CompareTag("DeathPlane"))
         {
-            Debug.Log("You Died");
+            ResetGame();
         }
 
 
@@ -81,9 +89,8 @@ public class DevilBehaviour : MonoBehaviour
 
         if (Other.gameObject.CompareTag("Goal"))
         {
-            levelCount++;
-            Debug.Log(levelCount);
-            ResetGame();
+            var currentLevel = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
+            FindObjectOfType<LevelSelectorManager>().GoToLevel(currentLevel + 1);
         }
     }
 
@@ -97,6 +104,6 @@ public class DevilBehaviour : MonoBehaviour
 
     void ResetGame()
     {
-        SceneManager.LoadScene(1+ levelCount);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

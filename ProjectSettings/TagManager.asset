@@ -11,6 +11,9 @@ TagManager:
   - BluePortal
   - Spikes
   - Lava
+  - RotatingSaw
+  - RightBound
+  - LeftBound
   layers:
   - Default
   - TransparentFX
