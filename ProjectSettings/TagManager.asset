@@ -10,6 +10,9 @@ TagManager:
   - RedPortal
   - BluePortal
   - Spikes
+  - RotatingSaw
+  - RightBound
+  - LeftBound
   layers:
   - Default
   - TransparentFX

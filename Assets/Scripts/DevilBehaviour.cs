@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class DevilBehaviour : MonoBehaviour
 {
-    public RotateMap rotate;
-    public GameObject RedPortal, BluePortal;
-    public int transportTimer = 0, transportSeconds = 20;
-    public Vector3 currentRedPortalPosition, currentBluePortalPosition;
+    private RotateMap rotate;
+    private GameObject RedPortal, BluePortal;
+    private int transportTimer = 0, transportSeconds = 20;
+    private Vector3 currentRedPortalPosition, currentBluePortalPosition;
     private bool transported = false;
     
 
@@ -56,9 +56,14 @@ public class DevilBehaviour : MonoBehaviour
             Debug.Log("hit spike");
         }
 
+        if (Other.gameObject.CompareTag("RotatingSaw"))
+        {
+            ResetGame();
+        }
+
         if (Other.gameObject.CompareTag("DeathPlane"))
         {
-            Debug.Log("You Died");
+            ResetGame();
         }
 
         if(!transported && Other.gameObject.CompareTag("RedPortal"))
