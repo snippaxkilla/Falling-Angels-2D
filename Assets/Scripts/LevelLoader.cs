@@ -8,16 +8,6 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //change the if to so it does this only when ontriggerenter for devil is the goal
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            LoadNextLevel();
-        }
-    }
-
     public void LoadNextLevel() 
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));

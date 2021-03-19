@@ -11,13 +11,12 @@ public class DevilBehaviour : MonoBehaviour
     public GameObject RedPortal, BluePortal, DissapearingWall;
     public int transportTimer = 0, transportSeconds = 20;
     public Vector3 currentRedPortalPosition, currentBluePortalPosition;
+    string[] Hazards = { "Spikes", "RotatingSaw", "DeathPlane", "Lava" };
 
     private bool transported = false;
     public Rigidbody2D rBody;
     public bool launchpadActive = false;
     public float launchpadTimer;
-
-    
 
     void Start()
     {
@@ -28,8 +27,6 @@ public class DevilBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(transform.position);
-
         if (RedPortal && BluePortal)
         {
             currentRedPortalPosition = RedPortal.transform.position;
@@ -60,7 +57,6 @@ public class DevilBehaviour : MonoBehaviour
                 launchpadActive = false;
                 launchpadTimer = 0;
             }
-
         }
 
         else 
@@ -75,31 +71,15 @@ public class DevilBehaviour : MonoBehaviour
             Destroy(Other.gameObject);
         }
 
-        if (Other.gameObject.CompareTag("Spikes"))
+        for (int i = 0; i < Hazards.Length; i++)
         {
-            ResetGame();
-            Debug.Log("hit spike");
+            if (Other.gameObject.CompareTag(Hazards[i]))
+            {
+                ResetGame();
+            }
         }
 
-        if (Other.gameObject.CompareTag("RotatingSaw"))
-        {
-            ResetGame();
-        }
-
-        if (Other.gameObject.CompareTag("DeathPlane"))
-        {
-            ResetGame();
-        }
-
-
-        if (Other.gameObject.CompareTag("Lava"))
-        {
-            Debug.Log("You fell in lava");
-            ResetGame();
-        }
-        
-
-        if(!transported && Other.gameObject.CompareTag("RedPortal"))
+        if (!transported && Other.gameObject.CompareTag("RedPortal"))
 
         {
             transform.position = currentBluePortalPosition;
@@ -115,7 +95,9 @@ public class DevilBehaviour : MonoBehaviour
         if (Other.gameObject.CompareTag("Goal"))
         {
             var currentLevel = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
-            FindObjectOfType<LevelSelectorManager>().GoToLevel(currentLevel + 1);
+            FindObjectOfType<LevelLoader>().LoadNextLevel();
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
         }
 
         if(Other.gameObject.CompareTag("Launchpad"))
@@ -131,15 +113,6 @@ public class DevilBehaviour : MonoBehaviour
         {
             DissapearingWall.SetActive(false);
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Spikes"))
-        {
-            ResetGame();    
-        }
-        
     }
 
     void ResetGame()
