@@ -18,6 +18,7 @@ TagManager:
   - Pressurepad
   - RightBound
   - LeftBound
+  - button
   layers:
   - Default
   - TransparentFX
