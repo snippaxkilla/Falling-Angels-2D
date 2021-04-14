@@ -7,6 +7,7 @@ public class period : MonoBehaviour
     // Start is called before the first frame update
     public GameObject geyser;
     float tiem = 0;
+    public float requiredTime =  2;
     void Start()
     {
         //geyser = GameObject.Find("wind");
@@ -17,7 +18,7 @@ public class period : MonoBehaviour
     {
          tiem += Time.deltaTime;
         
-        if (tiem >= 1)
+        if (tiem >= requiredTime)
         {
             
             if (geyser.activeSelf)

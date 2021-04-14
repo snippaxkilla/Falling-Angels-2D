@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8404275308333673704}
   - component: {fileID: 8404275308333673711}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PeriodicWind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737323, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_TagString
-      value: button
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
