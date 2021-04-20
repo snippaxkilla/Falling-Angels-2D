@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    
+    public bool IsGlobal;
     //make an list for all the sounds
     public Sound[] sounds;
 
     void Awake()
     {
+        if (IsGlobal)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
         foreach(Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -22,7 +26,10 @@ public class AudioManager : MonoBehaviour
 
     public void Start()
     {
-        Play("Theme");
+        if (IsGlobal)
+        {
+            Play("Theme");
+        }
     }
 
     public void Play(string name)

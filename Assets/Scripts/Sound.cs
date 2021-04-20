@@ -9,9 +9,9 @@ public class Sound
     public AudioClip clip;
 
     //settings we want to adjust
-    [Range(0, 100)]
+    [Range(0,1)]
     public float volume;
-    [Range(0, 5)]
+    [Range(0, 2)]
     public float pitch;
 
     [HideInInspector]
