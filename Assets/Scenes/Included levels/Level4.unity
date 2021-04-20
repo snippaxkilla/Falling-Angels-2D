@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737320, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.68
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737320, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_LocalScale.y
@@ -405,11 +405,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737324, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_ForceMagnitude
-      value: 25
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+      propertyPath: isTimerUsed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: timerOffset
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
@@ -1303,6 +1307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69aa28177a91eb4297fbef786b7fc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsGlobal: 0
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
@@ -1445,7 +1450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737320, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.35
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737320, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_LocalScale.y
@@ -1496,8 +1501,20 @@ PrefabInstance:
       value: wind (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7523918088237737324, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+      propertyPath: m_ForceTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523918088237737324, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: m_ForceMagnitude
-      value: 25
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+      propertyPath: isTimerUsed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+      propertyPath: timerOffset
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}

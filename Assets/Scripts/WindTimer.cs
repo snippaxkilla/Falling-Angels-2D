@@ -7,7 +7,7 @@ public class WindTimer : MonoBehaviour
     float timer = 0;
     public float timerOffset;
     public bool isTimerUsed;
-    public bool TimerActive = true;
+    public bool WindTimeSwitch = true;
     ParticleSystem pSystem;
     AreaEffector2D areaEffector2;
     // Start is called before the first frame update
@@ -29,23 +29,23 @@ public class WindTimer : MonoBehaviour
             
             timer += Time.deltaTime;
 
-            if(timer >= timerOffset && TimerActive == true)
+            if(timer >= timerOffset && WindTimeSwitch == true)
             {
                 timer = 0;
-                TimerActive = false;
+                WindTimeSwitch = false;
                 pSystem.Stop();
                 areaEffector2.enabled = false;
             }
 
-            if(timer >= timerOffset && TimerActive == false)
+            if(timer >= timerOffset && WindTimeSwitch == false)
             {
                 timer = 0;
-                TimerActive = true;
+                WindTimeSwitch = true;
                 pSystem.Play();
                 areaEffector2.enabled = true;
             }
 
-            Debug.Log(TimerActive);
+            Debug.Log(WindTimeSwitch);
             Debug.Log(timer);
         }
 
