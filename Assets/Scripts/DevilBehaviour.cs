@@ -48,21 +48,7 @@ public class DevilBehaviour : MonoBehaviour
             }
         }
 
-        if(launchpadActive == true)
-        {
-            launchpadTimer += Time.deltaTime * 1;
-            rBody.gravityScale = -0.8f;
-            if(launchpadTimer >= 2)
-            {
-                launchpadActive = false;
-                launchpadTimer = 0;
-            }
-        }
 
-        else 
-        {
-            rBody.gravityScale = 0.8f;
-        }
     }
     void OnTriggerEnter2D(Collider2D Other)
     {

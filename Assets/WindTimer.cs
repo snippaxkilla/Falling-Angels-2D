@@ -5,6 +5,7 @@ using UnityEngine;
 public class WindTimer : MonoBehaviour
 {
     float timer = 0;
+    public float timerOffset;
     public bool isTimerUsed;
     public bool TimerActive = true;
     ParticleSystem pSystem;
@@ -28,7 +29,7 @@ public class WindTimer : MonoBehaviour
             
             timer += Time.deltaTime;
 
-            if(timer >= 2 && TimerActive == true)
+            if(timer >= timerOffset && TimerActive == true)
             {
                 timer = 0;
                 TimerActive = false;
@@ -36,7 +37,7 @@ public class WindTimer : MonoBehaviour
                 areaEffector2.enabled = false;
             }
 
-            if(timer >= 2 && TimerActive == false)
+            if(timer >= timerOffset && TimerActive == false)
             {
                 timer = 0;
                 TimerActive = true;
