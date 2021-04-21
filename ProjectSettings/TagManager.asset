@@ -19,6 +19,7 @@ TagManager:
   - RightBound
   - LeftBound
   - button
+  - WindSwitch
   layers:
   - Default
   - TransparentFX
