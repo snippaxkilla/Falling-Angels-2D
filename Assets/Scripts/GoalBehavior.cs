@@ -7,22 +7,19 @@ public class GoalBehavior : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     private int spriteCountDown;
+    private bool closeDoor = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(spriteCountDown);
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if (closeDoor)
         {
             spriteCountDown++;
 
@@ -50,6 +47,14 @@ public class GoalBehavior : MonoBehaviour
             {
                 spriteRenderer.sprite = spriteArray[4];
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!closeDoor && other.gameObject.CompareTag("Player"))
+        {
+            closeDoor = true;
         }
     }
 }

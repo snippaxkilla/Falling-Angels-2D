@@ -8,9 +8,9 @@ public class DevilBehaviour : MonoBehaviour
 {
 
     public RotateMap rotate;
-    public GameObject RedPortal, BluePortal, DissapearingWall;
+    public GameObject Goal, RedPortal, BluePortal, DissapearingWall;
     public int transportTimer = 0, transportSeconds = 20;
-    public Vector3 currentRedPortalPosition, currentBluePortalPosition;
+    public Vector3 currentRedPortalPosition, currentBluePortalPosition, currentGoalPosition;
     string[] Hazards = { "Spikes", "RotatingSaw", "DeathPlane", "Lava" };
 
     private bool transported = false;
@@ -24,9 +24,12 @@ public class DevilBehaviour : MonoBehaviour
         RedPortal = GameObject.Find("RedPortal");
         BluePortal = GameObject.Find("BluePortal");
         DissapearingWall = GameObject.Find("Dissapearingwall");
+        Goal = GameObject.Find("Goal");
     }
     private void Update()
     {
+        currentGoalPosition = Goal.transform.position;
+
         if (RedPortal && BluePortal)
         {
             currentRedPortalPosition = RedPortal.transform.position;
@@ -82,7 +85,9 @@ public class DevilBehaviour : MonoBehaviour
         {
             var currentLevel = int.Parse(SceneManager.GetActiveScene().name.Replace("Level", ""));
             FindObjectOfType<LevelLoader>().LoadNextLevel();
+            this.transform.position = currentGoalPosition;
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
 
         }
 
