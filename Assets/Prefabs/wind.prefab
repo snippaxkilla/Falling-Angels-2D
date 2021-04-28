@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7523918088237737324}
   - component: {fileID: 7523918088237737327}
   - component: {fileID: 9170353397567920377}
+  - component: {fileID: 3684453456222174329}
   m_Layer: 0
   m_Name: wind
   m_TagString: Untagged
@@ -4826,7 +4827,7 @@ AreaEffector2D:
   m_ForceMagnitude: 14
   m_ForceVariation: 0
   m_ForceTarget: 0
-  m_Drag: 0
+  m_Drag: 5
   m_AngularDrag: 0
 --- !u!61 &7523918088237737327
 BoxCollider2D:
@@ -4866,5 +4867,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c648fb70d7ec94095abbf6039bb0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerOffset: 0
   isTimerUsed: 0
-  TimerActive: 0
+  WindTimeSwitch: 1
+--- !u!114 &3684453456222174329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523918088237737323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d065cf8a1789c4846a503034b87739da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSwitchUsed: 0
+  WindSwitched: 1
+  switchCheck: {fileID: 0}
