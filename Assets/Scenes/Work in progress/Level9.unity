@@ -2270,7 +2270,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: c6e87609c9845d847a1202a99580c030, type: 2}
+    m_Data: {fileID: 11400000, guid: 6bef9e2c6b3ed3a469f449bc81c8aebc, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b7b7f50b5e0f7e64485e02786166c0dd, type: 2}
   - m_RefCount: 1
@@ -2303,7 +2303,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 3117bcf2b356515439796eef217b8365, type: 3}
+    m_Data: {fileID: 21300000, guid: c0ba662e63a81ad4a9b9ab8ae0cf5f1f, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: a2791804c2ea6b342a4a01adf7283a64, type: 3}
   - m_RefCount: 1
@@ -2614,7 +2614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883493117}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3105,7 +3105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 550226516507910522, guid: ce10975f4c21535438ed035efe3f8dfd, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 550226516507910522, guid: ce10975f4c21535438ed035efe3f8dfd, type: 3}
       propertyPath: m_LocalPosition.x
