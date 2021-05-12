@@ -7,7 +7,7 @@ public class WindTimer : MonoBehaviour
     float timer = 0;
     public float timerOffset;
     public bool isTimerUsed;
-    public bool WindTimeSwitch = true;
+    public bool WindTimeSwitch;
     ParticleSystem pSystem;
     AreaEffector2D areaEffector2;
     // Start is called before the first frame update
@@ -15,10 +15,6 @@ public class WindTimer : MonoBehaviour
     {
         pSystem = GetComponent<ParticleSystem>();
         areaEffector2 = GetComponent<AreaEffector2D>();
-
-        pSystem.Play();
-        areaEffector2.enabled = true;
-
     }
 
     // Update is called once per frame
@@ -29,7 +25,12 @@ public class WindTimer : MonoBehaviour
             
             timer += Time.deltaTime;
 
-            if(timer >= timerOffset && WindTimeSwitch == true)
+            if(timer >= timerOffset)
+            {
+                WindTimeSwitch = !WindTimeSwitch;
+            }
+
+            if(WindTimeSwitch == true)
             {
                 timer = 0;
                 WindTimeSwitch = false;
@@ -37,7 +38,7 @@ public class WindTimer : MonoBehaviour
                 areaEffector2.enabled = false;
             }
 
-            if(timer >= timerOffset && WindTimeSwitch == false)
+            if(WindTimeSwitch == false)
             {
                 timer = 0;
                 WindTimeSwitch = true;
