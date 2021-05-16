@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3106793240072650285}
-  - component: {fileID: 696844088600055068}
   - component: {fileID: 5971181388424652115}
   - component: {fileID: 4149964842502330742}
+  - component: {fileID: 696844088600055068}
   - component: {fileID: 2272411123194684984}
   m_Layer: 4
   m_Name: LavaOrb
@@ -34,22 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &696844088600055068
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460884375990286481}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6e52035696ff8bb47ad23a4bc6f13033, type: 2}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.014053881, y: 0.028107762}
-  serializedVersion: 2
-  m_Radius: 0.8232392
 --- !u!212 &5971181388424652115
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,6 +106,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &696844088600055068
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460884375990286481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 6e52035696ff8bb47ad23a4bc6f13033, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.014053881, y: 0.028107762}
+  serializedVersion: 2
+  m_Radius: 0.8232392
 --- !u!58 &2272411123194684984
 CircleCollider2D:
   m_ObjectHideFlags: 0
