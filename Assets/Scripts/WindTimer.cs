@@ -30,15 +30,7 @@ public class WindTimer : MonoBehaviour
                 WindTimeSwitch = !WindTimeSwitch;
             }
 
-            if(WindTimeSwitch == true)
-            {
-                timer = 0;
-                WindTimeSwitch = false;
-                pSystem.Stop();
-                areaEffector2.enabled = false;
-            }
-
-            if(WindTimeSwitch == false)
+            if (WindTimeSwitch == false)
             {
                 timer = 0;
                 WindTimeSwitch = true;
@@ -46,10 +38,15 @@ public class WindTimer : MonoBehaviour
                 areaEffector2.enabled = true;
             }
 
-            Debug.Log(WindTimeSwitch);
-            Debug.Log(timer);
+            if (WindTimeSwitch == true)
+            {
+                timer = 0;
+                WindTimeSwitch = false;
+                pSystem.Stop();
+                areaEffector2.enabled = false;
+            }
+            //Debug.Log(WindTimeSwitch);
+            //Debug.Log(timer);
         }
-
-
     }
 }
