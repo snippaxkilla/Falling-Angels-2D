@@ -75,6 +75,9 @@ TagManager:
   - name: Player
     uniqueID: 2448603677
     locked: 0
+  - name: Interactables
+    uniqueID: 1341661669
+    locked: 0
   - name: UI Background
     uniqueID: 940792913
     locked: 0
