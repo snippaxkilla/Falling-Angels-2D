@@ -28,20 +28,20 @@ public class DevilBehaviour : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log(currentBluePortalPosition);
+        Debug.Log(currentRedPortalPosition);
+
         currentGoalPosition = Goal.transform.position;
 
-        if (RedPortal && BluePortal)
-        {
-            currentRedPortalPosition = RedPortal.transform.position;
-            currentBluePortalPosition = BluePortal.transform.position;
-        }
+        currentRedPortalPosition = RedPortal.transform.position;
+        currentBluePortalPosition = BluePortal.transform.position;
 
         if (Input.GetKeyDown(KeyCode.P))
         {
             ResetGame();
         }
 
-        if(transported)
+        if (transported)
         {
             transportTimer++;
             if (transportTimer >= transportSeconds)
@@ -69,15 +69,14 @@ public class DevilBehaviour : MonoBehaviour
         }
 
         if (!transported && Other.gameObject.CompareTag("RedPortal"))
-
         {
-            transform.position = currentBluePortalPosition;
+            this.transform.position = currentBluePortalPosition;
             transported = true;
         }
 
         if (!transported && Other.gameObject.CompareTag("BluePortal"))
         {
-            transform.position = currentRedPortalPosition;
+            this.transform.position = currentRedPortalPosition;
             transported = true;
         }
 
@@ -91,16 +90,16 @@ public class DevilBehaviour : MonoBehaviour
 
         }
 
-        if(Other.gameObject.CompareTag("Launchpad"))
+        if (Other.gameObject.CompareTag("Launchpad"))
         {
             launchpadActive = true;
         }
 
-        if(Other.gameObject.CompareTag("Inverterpad"))
+        if (Other.gameObject.CompareTag("Inverterpad"))
         {
             rotate.Speed = rotate.Speed * -1;
         }
-        if(Other.gameObject.CompareTag("Pressurepad"))
+        if (Other.gameObject.CompareTag("Pressurepad"))
         {
             DissapearingWall.SetActive(false);
         }
