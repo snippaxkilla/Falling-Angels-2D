@@ -21,10 +21,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Work in progress/IntroLevel.unity
     guid: 9ce1970866ee3e34fbf18bf86657ea4f
   - enabled: 0
-    path: Assets/Scenes/Work in progress/1.unity
+    path: Assets/Scenes/OldLevels/1.unity
     guid: da5e757a4def2b04e9acd98f454f8ca0
   - enabled: 0
-    path: Assets/Scenes/Work in progress/2.unity
+    path: Assets/Scenes/OldLevels/2.unity
     guid: 2e66fcb30cefca94f85884e1cb280682
   - enabled: 1
     path: Assets/Scenes/Included levels/Level1.unity
