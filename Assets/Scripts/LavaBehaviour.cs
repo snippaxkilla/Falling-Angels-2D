@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LavaBehaviour : MonoBehaviour
 {
-    float time = 0; 
+    public float time = 0;
+    public float endTime = 5;
     public GameObject LavaDrop;
     public Transform Lava;
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class LavaBehaviour : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= 5)
+        if (time >= endTime)
         {
             Instantiate(LavaDrop, Lava.position, Lava.rotation);
             time = 0;
