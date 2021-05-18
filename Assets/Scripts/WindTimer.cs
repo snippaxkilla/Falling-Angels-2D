@@ -27,7 +27,7 @@ public class WindTimer : MonoBehaviour
 
             timer += Time.deltaTime;
 
-            Debug.Log(WindTimeSwitch);
+            
 
             if (timer >= timerOffset)
             {
@@ -53,8 +53,6 @@ public class WindTimer : MonoBehaviour
 
             }
 
-            Debug.Log(WindTimeSwitch);
-            Debug.Log(timer);
         }
 
 

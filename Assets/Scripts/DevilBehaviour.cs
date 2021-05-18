@@ -16,7 +16,7 @@ public class DevilBehaviour : MonoBehaviour
     private bool transported = false;
     public Rigidbody2D rBody;
     public bool launchpadActive = false;
-    public float launchpadTimer;
+    public float launchpadTimer = 0;
 
     void Start()
     {
@@ -25,6 +25,7 @@ public class DevilBehaviour : MonoBehaviour
         BluePortal = GameObject.Find("BluePortal");
         DissapearingWall = GameObject.Find("Dissapearingwall");
         Goal = GameObject.Find("Goal");
+       
     }
     private void Update()
     {
@@ -32,9 +33,11 @@ public class DevilBehaviour : MonoBehaviour
         Debug.Log(currentRedPortalPosition);
 
         currentGoalPosition = Goal.transform.position;
-
-        currentRedPortalPosition = RedPortal.transform.position;
-        currentBluePortalPosition = BluePortal.transform.position;
+        if (RedPortal && BluePortal)
+        {
+            currentRedPortalPosition = RedPortal.transform.position;
+            currentBluePortalPosition = BluePortal.transform.position;
+        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -50,6 +53,28 @@ public class DevilBehaviour : MonoBehaviour
                 transportTimer = 0;
             }
         }
+
+        if(launchpadActive == true) 
+        {
+
+            launchpadTimer += Time.deltaTime * 1;
+            rBody.gravityScale = -1;
+
+            if(launchpadTimer >= 4)
+            {
+                launchpadActive = false;
+                
+            }
+        
+        }
+
+        if (launchpadActive == false)
+        {
+            launchpadTimer = 0;
+            rBody.gravityScale = 1;
+        }
+
+        
 
 
     }
