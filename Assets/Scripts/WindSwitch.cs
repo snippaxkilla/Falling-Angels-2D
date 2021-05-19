@@ -23,14 +23,14 @@ public class WindSwitch : MonoBehaviour
         pSystem.Play();
         areaEffector2.enabled = true;
 
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        Debug.Log(switchCheck.Switched);
+        
 
         if (isSwitchUsed == true)
         {

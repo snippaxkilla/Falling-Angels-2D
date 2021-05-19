@@ -33,8 +33,11 @@ public class DevilBehaviour : MonoBehaviour
 
         currentGoalPosition = Goal.transform.position;
 
-        currentRedPortalPosition = RedPortal.transform.position;
-        currentBluePortalPosition = BluePortal.transform.position;
+        if (RedPortal && BluePortal)
+        {
+            currentRedPortalPosition = RedPortal.transform.position;
+            currentBluePortalPosition = BluePortal.transform.position;
+        }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
