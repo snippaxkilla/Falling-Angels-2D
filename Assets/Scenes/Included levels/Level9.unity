@@ -203,7 +203,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 610604623}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &65040790
 BoxCollider2D:
@@ -282,6 +282,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &86025235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86025236}
+  - component: {fileID: 86025237}
+  m_Layer: 0
+  m_Name: deathplane
+  m_TagString: Lava
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &86025236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86025235}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.298342, y: -6.091642, z: -31.108583}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 610604623}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &86025237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86025235}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -5.001763, y: 6.2184086}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6566019, y: 4.9396133}
+  m_EdgeRadius: 0
 --- !u!1 &199966184
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +372,7 @@ Transform:
   - {fileID: 818943728}
   - {fileID: 52811845}
   m_Father: {fileID: 610604623}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &362648505
 PrefabInstance:
@@ -479,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: timerOffset
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
@@ -587,13 +644,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 86025236}
   - {fileID: 2013893298}
   - {fileID: 65040789}
   - {fileID: 199966185}
   - {fileID: 1390251892}
   - {fileID: 2102278153}
-  - {fileID: 2087719265}
   - {fileID: 2023980997}
+  - {fileID: 2087719265}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2431,7 +2489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: timerOffset
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: WindTimeSwitch
@@ -2720,7 +2778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: timerOffset
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
@@ -2847,7 +2905,7 @@ Transform:
   - {fileID: 1038137566}
   - {fileID: 709017020}
   m_Father: {fileID: 610604623}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1556513396 stripped
 Transform:
@@ -3912,7 +3970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: timerOffset
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9170353397567920377, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: WindTimeSwitch
@@ -4065,7 +4123,7 @@ Transform:
   m_Children:
   - {fileID: 50483353}
   m_Father: {fileID: 610604623}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &2013893299
 Grid:
@@ -4239,7 +4297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 550226516507910522, guid: ce10975f4c21535438ed035efe3f8dfd, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 550226516507910522, guid: ce10975f4c21535438ed035efe3f8dfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4318,7 +4376,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 610604623}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &2102278154
 MonoBehaviour:
@@ -4348,7 +4406,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.37785476, y: 11.483503}
+  m_Offset: {x: 0.0109298825, y: 0.12815258}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4359,7 +4417,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13678327, y: 0.9225693}
+  m_Size: {x: 0.870633, y: 0.53633237}
   m_EdgeRadius: 0
 --- !u!1001 &2124488006
 PrefabInstance:
