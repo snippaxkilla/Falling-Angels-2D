@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12649416506fdeb4a86cc1ab4c8ea92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 4
-  blurSpread: 0.3
+  iterations: 3
+  blurSpread: 0.5
   blurShader: {fileID: 4800000, guid: da57ab93f6b6435498a65ce2bd5f45be, type: 3}
 --- !u!114 &4683581112926716065
 MonoBehaviour:
