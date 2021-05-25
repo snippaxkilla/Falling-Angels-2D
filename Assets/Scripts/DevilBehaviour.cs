@@ -86,8 +86,6 @@ public class DevilBehaviour : MonoBehaviour
             FindObjectOfType<LevelLoader>().LoadNextLevel();
             this.transform.position = currentGoalPosition;
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-
-
         }
 
         if (Other.gameObject.CompareTag("Launchpad"))
