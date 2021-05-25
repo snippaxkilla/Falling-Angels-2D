@@ -28,9 +28,6 @@ public class DevilBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(currentBluePortalPosition);
-        Debug.Log(currentRedPortalPosition);
-
         currentGoalPosition = Goal.transform.position;
 
         if (RedPortal && BluePortal)
