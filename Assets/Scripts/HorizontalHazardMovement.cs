@@ -7,7 +7,9 @@ public class HorizontalHazardMovement : MonoBehaviour
     private Vector3 leftDirectionVector, rightDirectionVector, normalDirection;
     private GameObject leftBound, rightBound;
     private bool reverse = false;
-    public int sawSpeed = 100;
+    [Range(0, 100)]
+    [SerializeField]
+    private int sawSpeed;
 
     // Start is called before the first frame update
     void Start()
