@@ -6,7 +6,7 @@ public class period : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject geyser;
-    float tiem = 0;
+    float time = 0;
     public float requiredTime =  2;
     void Start()
     {
@@ -16,9 +16,9 @@ public class period : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         tiem += Time.deltaTime;
+         time += Time.deltaTime;
         
-        if (tiem >= requiredTime)
+        if (time >= requiredTime)
         {
             
             if (geyser.activeSelf)
@@ -31,7 +31,7 @@ public class period : MonoBehaviour
                 
                 geyser.SetActive(true);
             }
-            tiem = 0;
+            time = 0;
         }
     }
 }
