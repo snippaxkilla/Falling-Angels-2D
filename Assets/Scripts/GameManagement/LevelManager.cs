@@ -6,6 +6,8 @@ using System.Linq;
 
 public class LevelManager : MonoBehaviour
 {
+    public static int Level;
+
     void Start()
     {
        if(SceneManager.sceneCount == 1)
@@ -13,4 +15,6 @@ public class LevelManager : MonoBehaviour
             SceneManager.LoadScene("UI", LoadSceneMode.Additive);
        }
     }
+
+
 }

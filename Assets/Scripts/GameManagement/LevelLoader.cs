@@ -10,7 +10,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel() 
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel(LevelManager.Level + 1));
     }
 
     //delay code from running because the animtation needs to finish first, otherwise the player might die 
@@ -20,6 +20,22 @@ public class LevelLoader : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(levelIndex);
+        LevelManager.Level = levelIndex;
+        TallyManager.Reset();
+        SceneManager.LoadScene("Level" + levelIndex);
+    }
+
+    public void StartLoadWinTransition()
+    {
+        StartCoroutine(LoadWinTransition());
+    }
+
+    IEnumerator LoadWinTransition()
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene("WinScreenTransition");
     }
 }

@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class TallySystem : MonoBehaviour
 {
-    private Text scoreText;
-    private int score;
+    public Text scoreText;
 
     private void Start()
     {
         scoreText = GetComponent<Text>();     
     }
 
-    public void AddScore(int CoinValue)
+    public void AddScore()
     {
-        score += CoinValue;
-        scoreText.text = "Coins: " + score.ToString();
+        scoreText.text = "Coins: " + TallyManager.score.ToString();
     }
 }

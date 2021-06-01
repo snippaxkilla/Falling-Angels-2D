@@ -13,6 +13,7 @@ public class LevelSelectorManager : MonoBehaviour
             return;
         }
 
+        LevelManager.Level = level;
         SceneManager.LoadScene($"Level{level}");
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
     }
