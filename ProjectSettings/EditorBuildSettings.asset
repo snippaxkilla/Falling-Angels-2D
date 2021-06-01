@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Included levels/Level1.unity
     guid: 37f255e98de5347499d705f0f99e1e68
   - enabled: 1
+    path: Assets/Scenes/Testing/WinScreenTransition.unity
+    guid: 2f6b45b0f62e1074d813ecb64534c414
+  - enabled: 1
     path: Assets/Scenes/Included levels/Level2.unity
     guid: e596fc82d57960c4eb396031cc05c10e
   - enabled: 1
