@@ -3532,7 +3532,7 @@ MonoBehaviour:
   IsGlobal: 0
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
+    clip: {fileID: 0}
     volume: 100
     pitch: 1
     source: {fileID: 0}

@@ -2520,10 +2520,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69aa28177a91eb4297fbef786b7fc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsGlobal: 0
+  IsGlobal: 1
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
+    clip: {fileID: 0}
     volume: 100
     pitch: 1
     source: {fileID: 0}

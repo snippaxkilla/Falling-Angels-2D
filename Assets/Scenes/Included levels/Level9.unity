@@ -700,8 +700,8 @@ Transform:
   - {fileID: 199966185}
   - {fileID: 1390251892}
   - {fileID: 2102278153}
-  - {fileID: 347453298}
   - {fileID: 1484335391}
+  - {fileID: 347453298}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3881,7 +3881,7 @@ MonoBehaviour:
   IsGlobal: 0
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
+    clip: {fileID: 0}
     volume: 100
     pitch: 1
     source: {fileID: 0}
