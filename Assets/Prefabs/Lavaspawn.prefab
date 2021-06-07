@@ -122,5 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de84c861b2b70284492d9b640d364e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
+  endTime: 5
   LavaDrop: {fileID: 180645204178877283, guid: 8354328fb88e38c4eb03d1b4e4e30f53, type: 3}
   Lava: {fileID: 4264936339808435941}
