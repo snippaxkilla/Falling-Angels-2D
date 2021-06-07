@@ -23,6 +23,7 @@ TagManager:
   - SwitchWindB1
   - SwitchWindB2
   - SwitchWindB3
+  - WindHatch
   layers:
   - Default
   - TransparentFX
