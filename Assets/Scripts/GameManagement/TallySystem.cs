@@ -14,6 +14,6 @@ public class TallySystem : MonoBehaviour
 
     public void AddScore()
     {
-        scoreText.text = "Coins: " + TallyManager.score.ToString();
+        scoreText.text = "Gems: " + TallyManager.score.ToString();
     }
 }
