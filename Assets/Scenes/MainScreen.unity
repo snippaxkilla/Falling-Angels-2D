@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69aa28177a91eb4297fbef786b7fc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsGlobal: 0
+  IsGlobal: 1
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 769dac5309ba35f44b96ec5e99159d63, type: 3}

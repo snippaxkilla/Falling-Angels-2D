@@ -993,6 +993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+--- !u!82 &828077925 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1302710499265300569, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+  m_PrefabInstance: {fileID: 1590393470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &919989362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,7 +4094,7 @@ PrefabInstance:
     - target: {fileID: 3684453456222174329, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: WindOnOff
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 828077925}
     - target: {fileID: 3684453456222174329, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: switchCheck
       value: 
