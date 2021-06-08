@@ -11,12 +11,14 @@ public class WindTimer : MonoBehaviour
     ParticleSystem pSystem;
     AreaEffector2D areaEffector2;
     ParticleSystemRenderer pSystemRenderer;
+    
     // Start is called before the first frame update
     void Start()
     {
         pSystem = GetComponent<ParticleSystem>();
         areaEffector2 = GetComponent<AreaEffector2D>();
         pSystemRenderer = GetComponent<ParticleSystemRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class WindTimer : MonoBehaviour
                 pSystemRenderer.enabled = true;
                 pSystem.Play();
                 areaEffector2.enabled = true;
-
+                
             }
 
             if (WindTimeSwitch == false)
@@ -50,7 +52,7 @@ public class WindTimer : MonoBehaviour
                 pSystemRenderer.enabled = false;
                 pSystem.Pause();
                 areaEffector2.enabled = false;
-
+                
             }
 
         }
