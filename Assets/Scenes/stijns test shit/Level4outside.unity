@@ -4016,7 +4016,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1292488847
@@ -4487,10 +4487,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.2
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4509,9 +4509,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.011149794, y: 0}
   serializedVersion: 2
-  m_Radius: 0.33
+  m_Radius: 0.5084006
 --- !u!212 &1889027500
 SpriteRenderer:
   m_ObjectHideFlags: 0

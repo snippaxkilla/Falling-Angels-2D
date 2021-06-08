@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class LavaBehaviour : MonoBehaviour
 {
-    public float time = 0;
-    public float endTime = 5;
-    public GameObject LavaDrop;
-    public Transform Lava;
+    [Header("timing values")]
+    private const int range = 10;
+    [SerializeField] [Range(0, range)] private  float endTime = 5;
+    [SerializeField] [Range(0, range)] public float time = 0;
+
+    [Header("related objects")]
+    [SerializeField] private GameObject LavaDrop;
+    [SerializeField] private Transform Lava;
     // Start is called before the first frame update
     void Start()
     {
