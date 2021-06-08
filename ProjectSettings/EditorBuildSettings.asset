@@ -59,4 +59,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Included levels/Level9.unity
+    guid: efb7b47cb66ac0b42b984f5e3a1eae6c
+  - enabled: 1
+    path: Assets/Scenes/Included levels/Pain.unity
+    guid: 38acd495bc56dfd4bb92c45370e5f59a
   m_configObjects: {}
