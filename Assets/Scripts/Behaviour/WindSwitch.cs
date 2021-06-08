@@ -12,6 +12,7 @@ public class WindSwitch : MonoBehaviour
     ParticleSystem pSystem;
     AreaEffector2D areaEffector2;
     ParticleSystemRenderer pSystemRenderer;
+    public AudioSource WindOnOff;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class WindSwitch : MonoBehaviour
         pSystem = GetComponent<ParticleSystem>();
         areaEffector2 = GetComponent<AreaEffector2D>();
         pSystemRenderer = GetComponent<ParticleSystemRenderer>();
+        
 
         pSystem.Play();
         areaEffector2.enabled = true;
@@ -30,7 +32,7 @@ public class WindSwitch : MonoBehaviour
     void Update()
     {
 
-        
+
 
         if (isSwitchUsed == true)
         {
@@ -40,17 +42,20 @@ public class WindSwitch : MonoBehaviour
                 pSystemRenderer.enabled = false;
                 pSystem.Pause();
                 areaEffector2.enabled = false;
+                WindOnOff.Play();
+
+                if (switchCheck.Switched == true)
+                {
+                    pSystemRenderer.enabled = true;
+                    pSystem.Play();
+                    areaEffector2.enabled = true;
+                    WindOnOff.Play();
+                }
+
             }
 
-            if (switchCheck.Switched == true)
-            {
-                pSystemRenderer.enabled = true;
-                pSystem.Play();
-                areaEffector2.enabled = true;
-            }
 
         }
-
 
     }
 }

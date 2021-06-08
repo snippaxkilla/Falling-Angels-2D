@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
     {
         if (IsGlobal)
         {
-            Play("Theme");
+            Loop("Theme");
         }
     }
 
@@ -36,5 +36,12 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
+    }
+
+    public void Loop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Play();
+        s.source.loop = true;
     }
 }

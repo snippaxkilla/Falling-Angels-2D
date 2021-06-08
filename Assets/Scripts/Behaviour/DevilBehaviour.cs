@@ -17,6 +17,10 @@ public class DevilBehaviour : MonoBehaviour
     public Rigidbody2D rBody;
     public bool launchpadActive = false;
     public float launchpadTimer;
+    AudioManager aManage;
+    public AudioSource GemCollect;
+    public AudioSource DoorOpen;
+    public AudioSource WindHatch;
 
     void Start()
     {
@@ -25,6 +29,7 @@ public class DevilBehaviour : MonoBehaviour
         BluePortal = GameObject.Find("BluePortal");
         DissapearingWall = GameObject.Find("Dissapearingwall");
         Goal = GameObject.Find("Goal");
+        aManage = GetComponent<AudioManager>();
     }
     private void Update()
     {
@@ -61,6 +66,7 @@ public class DevilBehaviour : MonoBehaviour
         if (Other.gameObject.CompareTag("Coin"))
         {
             Destroy(Other.gameObject);
+            GemCollect.Play();
         }
 
         for (int i = 0; i < Hazards.Length; i++)
@@ -90,6 +96,8 @@ public class DevilBehaviour : MonoBehaviour
             this.transform.position = Goal.transform.position;
 
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+            DoorOpen.Play();
         }
 
         if (Other.gameObject.CompareTag("Launchpad"))
