@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Linq;
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,6 +12,4 @@ public class LevelManager : MonoBehaviour
             SceneManager.LoadScene("UI", LoadSceneMode.Additive);
        }
     }
-
-
 }
