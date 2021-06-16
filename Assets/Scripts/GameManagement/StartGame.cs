@@ -4,21 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public Sprite[] spriteArray;
+    public SpriteRenderer SpriteRenderer;
+    public Sprite[] SpriteArray;
 
     public Button button;
-    // Start is called before the first frame update
 
+    //getting components
     void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         button.onClick.AddListener(Task);
     }
 
+
     void Task()
     {
-        spriteRenderer.sprite = spriteArray[1];
+        SpriteRenderer.sprite = SpriteArray[1];
         SceneManager.LoadScene("LevelSelector");
     }
 }

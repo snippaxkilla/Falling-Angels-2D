@@ -6,6 +6,7 @@ public class RotateMap : MonoBehaviour
     public float Speed = 300f;
     public float Margin = 0.05f;
  
+    //pc rotation
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -19,6 +20,7 @@ public class RotateMap : MonoBehaviour
         AccelerometerMove();
     }
 
+    //phone rotation 
     private void AccelerometerMove()
     {
         float PhoneRotationX = Input.acceleration.x;

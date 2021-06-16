@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator transition;
-    public float transitionTime = 1f;
+    public Animator Transition;
+    public float TransitionTime = 1f;
 
     public void LoadNextLevel() 
     {
@@ -15,9 +15,9 @@ public class LevelLoader : MonoBehaviour
     //delay code from running because the animtation needs to finish first, otherwise the player might die 
     IEnumerator LoadLevel(int levelIndex) 
     {
-        transition.SetTrigger("Start");
+        Transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(TransitionTime);
 
         LevelManager.Level = levelIndex;
         TallyManager.Reset();
@@ -31,9 +31,9 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadWinTransition()
     {
-        transition.SetTrigger("Start");
+        Transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSeconds(TransitionTime);
 
         SceneManager.LoadScene("WinScreenTransition");
     }

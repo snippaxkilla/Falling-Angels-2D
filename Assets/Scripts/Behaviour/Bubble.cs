@@ -19,11 +19,13 @@ public class Bubble : MonoBehaviour
         startY = transform.localPosition.y;
     }
 
+    //sin wave (-1, 1) over time
     void Update()
     {
         transform.localPosition = new Vector3(transform.localPosition.x, startY + Mathf.Sin(Time.time * offSet * speed) * moveAmount);
     }
 
+    //update placed behind the player update to avoid clipping
     void LateUpdate()
     {
         if (isHoldingPlayer)
@@ -38,6 +40,7 @@ public class Bubble : MonoBehaviour
         }
     }
 
+    //check entering conditions and if is already entered
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))

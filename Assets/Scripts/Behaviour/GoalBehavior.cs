@@ -11,6 +11,7 @@ public class GoalBehavior : MonoBehaviour
         g_Animator = gameObject.GetComponent<Animator>();
     }
 
+    //check if player hits door and activates animator trigger
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!closeDoor && other.gameObject.CompareTag("Player"))
