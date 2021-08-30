@@ -16,6 +16,7 @@ public class GoalBehavior : MonoBehaviour
     {
         if (!closeDoor && other.gameObject.CompareTag("Player"))
         {
+            AudioManager.instance.Play("Goal");
             g_Animator.SetTrigger("Open");
             closeDoor = true;
         }

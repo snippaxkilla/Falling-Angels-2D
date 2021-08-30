@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DevilBehaviour : MonoBehaviour
 {
+    [SerializeField] private float delay = 2f;
 
     public RotateMap rotate;
     public GameObject Goal, RedPortal, BluePortal, DissapearingWall;
@@ -73,7 +74,8 @@ public class DevilBehaviour : MonoBehaviour
         {
             if (Other.gameObject.CompareTag(Hazards[i]))
             {
-                ResetGame();
+                Destroy(gameObject);
+                StartCoroutine(ResetGameDelay(delay));
             }
         }
 
@@ -115,7 +117,13 @@ public class DevilBehaviour : MonoBehaviour
         }
     }
 
-    void ResetGame()
+    private IEnumerator ResetGameDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ResetGame();
+    }
+
+    public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
