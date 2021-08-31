@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerBlockerBehavior : MonoBehaviour
 {
-    [SerializeField] GameObject[] lol;
+    [SerializeField] private GameObject[] lol;
 
-    [SerializeField] Collider2D PlayerBlocker;
+    [SerializeField] private Collider2D PlayerBlocker;
     // Start is called before the first frame update
     void Start()
     {

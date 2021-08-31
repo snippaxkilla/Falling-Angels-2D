@@ -5,8 +5,8 @@ using UnityEngine;
 public class lavablockerbehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] Collider2D player;
-    [SerializeField] Collider2D lavablocker;
+    [SerializeField] private Collider2D player;
+    [SerializeField] private Collider2D lavablocker;
 
     void Start()
     {
