@@ -175,10 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd486e6da05a1324a83a983f3a1b60f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 351017943}
-  spriteArray:
-  - {fileID: 21300000, guid: 462153e9d46cdbc4a86f314089beb716, type: 3}
-  - {fileID: 21300000, guid: 342092cdfbd3b9942a4c2599383db68e, type: 3}
+  SpriteRenderer: {fileID: 0}
+  SpriteArray:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 255f7c12ca9118f49a2de9e1d14ea332, type: 3}
   button: {fileID: 32719754}
 --- !u!114 &32719754
 MonoBehaviour:
@@ -691,6 +691,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 769dac5309ba35f44b96ec5e99159d63, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1557036490
 Transform:
