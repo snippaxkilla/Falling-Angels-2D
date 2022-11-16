@@ -50,7 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Included levels/Level8.unity
     guid: a3a2941770d810e46ab7239471b8ec12
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Included levels/Level10.unity
     guid: e4f06f24692ce994a9d2f833edf853f1
   - enabled: 0
