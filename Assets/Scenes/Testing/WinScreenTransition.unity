@@ -497,6 +497,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &577817031
 Transform:
@@ -722,6 +723,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297711821702230329, guid: c9eb3d277abf1454c84822a0c785b804, type: 3}
+      propertyPath: Transition
+      value: 
+      objectReference: {fileID: 1556885422}
     - target: {fileID: 8336769417357090395, guid: c9eb3d277abf1454c84822a0c785b804, type: 3}
       propertyPath: m_Name
       value: LevelLoader

@@ -146,6 +146,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7e3e5df2cba9d304fbffc6ada4dc8d64, type: 3}
     volume: 1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &41418332
 GameObject:
@@ -742,16 +743,19 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 673cb22275c0c0f41b555270d91e3cbf, type: 3}
     volume: 1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: DoorOpen
     clip: {fileID: 8300000, guid: d55d27863f6c07f4fac4f97e7b6ae374, type: 3}
     volume: 1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
   - name: WindHatch
     clip: {fileID: 8300000, guid: e27238d05d1da6b41bc2db475f4dce0e, type: 3}
     volume: 1
     pitch: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &621065888
 GameObject:
@@ -2452,6 +2456,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!95 &754838973 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2835734362787082873, guid: c9eb3d277abf1454c84822a0c785b804, type: 3}
+  m_PrefabInstance: {fileID: 1581542800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916965848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,29 +2590,34 @@ MonoBehaviour:
   IsGlobal: 1
   sounds:
   - name: Theme
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 769dac5309ba35f44b96ec5e99159d63, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: WIndHatch
     clip: {fileID: 8300000, guid: e27238d05d1da6b41bc2db475f4dce0e, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: GemCollect
     clip: {fileID: 8300000, guid: 673cb22275c0c0f41b555270d91e3cbf, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: WindOn?Off
     clip: {fileID: 8300000, guid: 7e3e5df2cba9d304fbffc6ada4dc8d64, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: DoorOpen
     clip: {fileID: 8300000, guid: d55d27863f6c07f4fac4f97e7b6ae374, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1139463718
 Transform:
@@ -2953,6 +2967,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6297711821702230329, guid: c9eb3d277abf1454c84822a0c785b804, type: 3}
+      propertyPath: Transition
+      value: 
+      objectReference: {fileID: 754838973}
     - target: {fileID: 8336769417357090395, guid: c9eb3d277abf1454c84822a0c785b804, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -3379,6 +3397,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1125114327}
     m_Modifications:
+    - target: {fileID: 3005577152822541484, guid: aecaf63212854c74c916cb1aae5b2598, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3321185263247349349, guid: aecaf63212854c74c916cb1aae5b2598, type: 3}
       propertyPath: Goal
       value: 
