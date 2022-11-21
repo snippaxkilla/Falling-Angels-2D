@@ -75,7 +75,9 @@ public class DevilBehaviour : MonoBehaviour
             if (Other.gameObject.CompareTag(Hazards[i]))
             {
                 Destroy(gameObject);
-                StartCoroutine(ResetGameDelay(delay));
+                ResetGame();
+                
+                //StartCoroutine(ResetGameDelay(delay)); 
             }
         }
 
@@ -120,6 +122,7 @@ public class DevilBehaviour : MonoBehaviour
     private IEnumerator ResetGameDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+
         ResetGame();
     }
 
