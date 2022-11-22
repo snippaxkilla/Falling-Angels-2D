@@ -73,9 +73,8 @@ public class DevilBehaviour : MonoBehaviour
         for (int i = 0; i < Hazards.Length; i++)
         {
             if (Other.gameObject.CompareTag(Hazards[i]))
-            {
-                Destroy(gameObject);
-                StartCoroutine(ResetGameDelay(delay));
+            {      
+                StartCoroutine(ResetGameDelay(delay));         
             }
         }
 
