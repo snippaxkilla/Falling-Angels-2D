@@ -9,11 +9,18 @@ public class TallySystem : MonoBehaviour
 
     private void Start()
     {
-        scoreText = GetComponent<Text>();     
+        scoreText = GetComponent<Text>();
+
+        TallyManager.ScoreUpdated += UpdateScore;
     }
 
-    public void AddScore()
+    private void OnDestroy()
     {
-        scoreText.text = "Gems: " + TallyManager.score.ToString();
+        TallyManager.ScoreUpdated -= UpdateScore;
+    }
+
+    private void UpdateScore(int newScore)
+    {
+        scoreText.text = "Gems: " + newScore.ToString();
     }
 }
