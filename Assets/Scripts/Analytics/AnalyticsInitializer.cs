@@ -4,7 +4,7 @@ using Unity.Services.Analytics;
 using Unity.Services.Core;
 using UnityEngine;
 
-public class Initializer : MonoSingleton<Initializer>
+public class AnalyticsInitializer : MonoSingleton<AnalyticsInitializer>
 {
     async void Start()
     {
