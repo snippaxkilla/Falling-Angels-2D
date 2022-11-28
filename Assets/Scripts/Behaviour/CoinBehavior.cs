@@ -10,7 +10,6 @@ public class CoinBehavior : MonoBehaviour
         {
             AudioManager.instance.Play("Coin");
             TallyManager.AddScore(1);
-            Debug.Log(TallyManager.score);
         }
     }
 }

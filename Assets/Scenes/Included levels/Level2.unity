@@ -1895,10 +1895,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3321185263247349370, guid: aecaf63212854c74c916cb1aae5b2598, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecaf63212854c74c916cb1aae5b2598, type: 3}
 --- !u!1 &235274616
@@ -13161,6 +13157,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 769dac5309ba35f44b96ec5e99159d63, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1867557018
 Transform:

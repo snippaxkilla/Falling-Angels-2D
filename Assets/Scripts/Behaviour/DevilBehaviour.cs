@@ -129,5 +129,6 @@ public class DevilBehaviour : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        TallyManager.Reset();
     }
 }
