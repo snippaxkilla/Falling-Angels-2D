@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DisallowMultipleComponent]
+//[DisallowMultipleComponent]
 public abstract class MonoSingleton : MonoBehaviour, IPersistentObject
 {
     private protected MonoSingleton()

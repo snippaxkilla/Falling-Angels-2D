@@ -15,6 +15,7 @@ public class LevelSelectorManager : MonoBehaviour
         LevelManager.Level = level;
         SceneManager.LoadScene($"Level{level}");
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
+        Timer.Instance.InitialStartLevel();
     }
 
     //main menu is indexed as 1

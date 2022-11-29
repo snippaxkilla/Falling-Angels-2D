@@ -41,6 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8349478971786717567}
   - component: {fileID: 5057874901342671860}
+  - component: {fileID: 2232630476381117619}
+  - component: {fileID: 5004307320596040948}
   m_Layer: 0
   m_Name: Analytics
   m_TagString: Untagged
@@ -74,3 +76,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414529b58c6d87545be2a229a0245558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2232630476381117619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210126736809440631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f3bdd4f70d2f34197c49d050e2949c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5004307320596040948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210126736809440631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95136f8f7dc9c24486860c90a99d555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountOfDeaths: 0

@@ -22,6 +22,7 @@ public class LevelLoader : MonoBehaviour
         LevelManager.Level = levelIndex;
         TallyManager.Reset();
         SceneManager.LoadScene("Level" + levelIndex);
+        Timer.Instance.InitialStartLevel();
     }
 
     public void StartLoadWinTransition()

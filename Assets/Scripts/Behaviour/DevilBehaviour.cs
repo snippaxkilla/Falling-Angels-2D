@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 
 
@@ -22,6 +24,7 @@ public class DevilBehaviour : MonoBehaviour
     public AudioSource GemCollect;
     public AudioSource DoorOpen;
     public AudioSource WindHatch;
+    public int AmountOfDeathsInLevel;
 
     void Start()
     {
@@ -95,6 +98,15 @@ public class DevilBehaviour : MonoBehaviour
 
         if (Other.gameObject.CompareTag("Goal"))
         {
+            Dictionary<string, object> parameters = new Dictionary<string, object>()
+            {
+                {"TotalTimeLevel", Timer.Instance.TimeSinceInitialLevelStart},
+                {"TimeSinceLastDeath", Timer.Instance.TimeSpendInLevelThisSession},
+                {"AmountOfDeathsInLevel", TotalDeathCount.Instance.amountOfDeaths}
+            };
+
+            AnalyticsService.Instance.CustomData("LevelCompleted", parameters);
+
             FindObjectOfType<LevelLoader>().StartLoadWinTransition();
 
             this.transform.position = Goal.transform.position;
@@ -128,7 +140,9 @@ public class DevilBehaviour : MonoBehaviour
 
     public void ResetGame()
     {
+        TotalDeathCount.Instance.Death();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TallyManager.Reset();
+
     }
 }
