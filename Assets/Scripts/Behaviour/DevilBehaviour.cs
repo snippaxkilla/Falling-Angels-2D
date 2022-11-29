@@ -102,7 +102,10 @@ public class DevilBehaviour : MonoBehaviour
             {
                 {"TotalTimeLevel", Timer.Instance.TimeSinceInitialLevelStart},
                 {"TimeSinceLastDeath", Timer.Instance.TimeSpendInLevelThisSession},
-                {"AmountOfDeathsInLevel", TotalDeathCount.Instance.amountOfDeaths}
+                {"AmountOfDeathsInLevel", TotalDeathCount.Instance.amountOfDeaths},
+                {"GemsCollected", TallyManager.score},
+                {"Level", LevelManager.Level}
+
             };
 
             AnalyticsService.Instance.CustomData("LevelCompleted", parameters);
