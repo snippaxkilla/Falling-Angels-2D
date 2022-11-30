@@ -631,6 +631,7 @@ MonoBehaviour:
   GemCollect: {fileID: 0}
   DoorOpen: {fileID: 0}
   WindHatch: {fileID: 0}
+  AmountOfDeathsInLevel: 0
 --- !u!50 &641055272
 Rigidbody2D:
   serializedVersion: 4

@@ -5,27 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/MainScreen.unity
-    guid: d14c7518b3979e8479cae76c1c368257
-  - enabled: 1
-    path: Assets/Scenes/LevelSelector.unity
-    guid: 4dc8326ceca54164f9765bfb40361392
-  - enabled: 1
-    path: Assets/Scenes/UI.unity
-    guid: cba2b74dd976c174cabec16015b46007
-  - enabled: 1
-    path: Assets/Scenes/Testing/WinScreenTransition.unity
-    guid: 2f6b45b0f62e1074d813ecb64534c414
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Included levels/Level1.unity
     guid: 37f255e98de5347499d705f0f99e1e68
@@ -51,18 +30,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Included levels/Level8.unity
     guid: a3a2941770d810e46ab7239471b8ec12
   - enabled: 1
-    path: Assets/Scenes/Included levels/Level10.unity
-    guid: e4f06f24692ce994a9d2f833edf853f1
-  - enabled: 0
-    path: Assets/Scenes/Work in progress/IntroLevel.unity
-    guid: 9ce1970866ee3e34fbf18bf86657ea4f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Scenes/Included levels/Level9.unity
     guid: efb7b47cb66ac0b42b984f5e3a1eae6c
   - enabled: 1
+    path: Assets/Scenes/Included levels/Level10.unity
+    guid: e4f06f24692ce994a9d2f833edf853f1
+  - enabled: 1
     path: Assets/Scenes/Included levels/Pain.unity
     guid: 38acd495bc56dfd4bb92c45370e5f59a
+  - enabled: 1
+    path: Assets/Scenes/MainScreen.unity
+    guid: d14c7518b3979e8479cae76c1c368257
+  - enabled: 1
+    path: Assets/Scenes/LevelSelector.unity
+    guid: 4dc8326ceca54164f9765bfb40361392
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: cba2b74dd976c174cabec16015b46007
+  - enabled: 1
+    path: Assets/Scenes/Testing/WinScreenTransition.unity
+    guid: 2f6b45b0f62e1074d813ecb64534c414
+  - enabled: 0
+    path: Assets/Scenes/Work in progress/IntroLevel.unity
+    guid: 9ce1970866ee3e34fbf18bf86657ea4f
   m_configObjects: {}
