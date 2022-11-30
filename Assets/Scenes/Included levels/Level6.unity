@@ -4235,6 +4235,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1019610455}
     - target: {fileID: 3684453456222174329, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
+      propertyPath: WindSwitched
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684453456222174329, guid: 149a7fc726a238448a7ef31630f735d7, type: 3}
       propertyPath: isSwitchUsed
       value: 1
       objectReference: {fileID: 0}

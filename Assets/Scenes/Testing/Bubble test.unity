@@ -481,6 +481,7 @@ MonoBehaviour:
   GemCollect: {fileID: 0}
   DoorOpen: {fileID: 0}
   WindHatch: {fileID: 0}
+  AmountOfDeathsInLevel: 0
 --- !u!50 &648307298
 Rigidbody2D:
   serializedVersion: 4
@@ -3238,11 +3239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130359665411423910, guid: 4816a54156121854ebac9d2f143aaa10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 5130359665411423910, guid: 4816a54156121854ebac9d2f143aaa10, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.34
       objectReference: {fileID: 0}
     - target: {fileID: 5130359665411423910, guid: 4816a54156121854ebac9d2f143aaa10, type: 3}
       propertyPath: m_LocalPosition.z

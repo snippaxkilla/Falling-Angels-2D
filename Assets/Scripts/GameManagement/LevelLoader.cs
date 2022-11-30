@@ -14,7 +14,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(LevelManager.Level + 1));
     }
 
-    //delay code from running because the animtation needs to finish first, otherwise the player might die 
+    //delay code from running because the animation needs to finish first, otherwise the player might die 
     IEnumerator LoadLevel(int levelIndex)
     {
         Transition.SetTrigger("Start");
