@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,13 +9,13 @@ public class LevelLoader : MonoBehaviour
     public Animator Transition;
     public float TransitionTime = 1f;
 
-    public void LoadNextLevel() 
+    public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(LevelManager.Level + 1));
     }
 
     //delay code from running because the animtation needs to finish first, otherwise the player might die 
-    IEnumerator LoadLevel(int levelIndex) 
+    IEnumerator LoadLevel(int levelIndex)
     {
         Transition.SetTrigger("Start");
 
@@ -23,6 +25,13 @@ public class LevelLoader : MonoBehaviour
         TallyManager.Reset();
         SceneManager.LoadScene("Level" + levelIndex);
         Timer.Instance.InitialStartLevel();
+
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            { "Level", levelIndex}
+        };
+
+        AnalyticsService.Instance.CustomData("LevelStarted", parameters);
     }
 
     public void StartLoadWinTransition()

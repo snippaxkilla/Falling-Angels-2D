@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,7 +7,7 @@ public class LevelSelectorManager : MonoBehaviour
 {
     public void GoToLevel(int level)
     {
-        if (!Application.CanStreamedLevelBeLoaded($"Level{level}")) 
+        if (!Application.CanStreamedLevelBeLoaded($"Level{level}"))
         {
             GoToMainMenu();
             return;
@@ -16,10 +18,17 @@ public class LevelSelectorManager : MonoBehaviour
         SceneManager.LoadScene($"Level{level}");
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
         Timer.Instance.InitialStartLevel();
+
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            { "Level", level}
+        };
+
+        AnalyticsService.Instance.CustomData("LevelStarted", parameters);
     }
 
     //main menu is indexed as 1
-    public void GoToMainMenu() 
+    public void GoToMainMenu()
     {
         SceneManager.LoadScene(1);
     }
