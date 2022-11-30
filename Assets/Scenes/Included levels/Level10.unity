@@ -1160,6 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8e7c1cecb99b14088d07871c8707ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 2
   rotate: {fileID: 0}
   Goal: {fileID: 0}
   RedPortal: {fileID: 0}
@@ -1173,6 +1174,7 @@ MonoBehaviour:
   GemCollect: {fileID: 0}
   DoorOpen: {fileID: 0}
   WindHatch: {fileID: 0}
+  AmountOfDeathsInLevel: 0
 --- !u!50 &874074194
 Rigidbody2D:
   serializedVersion: 4
@@ -17007,12 +17009,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69aa28177a91eb4297fbef786b7fc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsGlobal: 0
+  IsGlobal: 1
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
     volume: 100
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WIndHatch
+    clip: {fileID: 8300000, guid: e27238d05d1da6b41bc2db475f4dce0e, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GemCollect
+    clip: {fileID: 8300000, guid: 673cb22275c0c0f41b555270d91e3cbf, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WindOn?Off
+    clip: {fileID: 8300000, guid: 7e3e5df2cba9d304fbffc6ada4dc8d64, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DoorOpen
+    clip: {fileID: 8300000, guid: d55d27863f6c07f4fac4f97e7b6ae374, type: 3}
+    volume: 100
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1613662619
 Transform:
