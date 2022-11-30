@@ -6,7 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public bool IsGlobal;
-    //make an list for all the sounds
     public Sound[] sounds;
 
     void Awake()

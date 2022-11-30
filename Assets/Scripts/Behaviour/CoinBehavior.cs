@@ -8,7 +8,7 @@ public class CoinBehavior : MonoBehaviour
     {
         if (Other.gameObject.CompareTag("Player"))
         {
-            AudioManager.instance.Play("Coin");
+            AudioManager.instance.Play("GemCollect");
             TallyManager.AddScore(1);
         }
     }

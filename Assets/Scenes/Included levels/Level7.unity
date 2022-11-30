@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &59387649
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706887, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
 --- !u!1001 &159953582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -771,81 +828,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0558243, y: 0.33131218}
   m_EdgeRadius: 0
---- !u!1 &741605198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 741605200}
-  - component: {fileID: 741605199}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &741605199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741605198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69aa28177a91eb4297fbef786b7fc9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsGlobal: 1
-  sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: WIndHatch
-    clip: {fileID: 8300000, guid: e27238d05d1da6b41bc2db475f4dce0e, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: GemCollect
-    clip: {fileID: 8300000, guid: 673cb22275c0c0f41b555270d91e3cbf, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: WindOn?Off
-    clip: {fileID: 8300000, guid: 7e3e5df2cba9d304fbffc6ada4dc8d64, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: DoorOpen
-    clip: {fileID: 8300000, guid: d55d27863f6c07f4fac4f97e7b6ae374, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &741605200
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741605198}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &763816375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1604,7 +1586,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 12
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2755,12 +2737,12 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 1a7d10561a80eb542b70af7f5c7f6a5a, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 003e592430771a34c84caa27c321382e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 27e17a0a1db15624a8b238cfb4d698ab, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300000, guid: 4a159f628435f46449a223fd0939d48e, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 21300000, guid: 4a159f628435f46449a223fd0939d48e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 27e17a0a1db15624a8b238cfb4d698ab, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: 21300000, guid: 8e9af26c79e3e254caa3f5ba3e646766, type: 3}
   - m_RefCount: 24

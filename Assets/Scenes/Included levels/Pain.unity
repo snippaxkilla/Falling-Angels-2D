@@ -2358,6 +2358,63 @@ Transform:
   m_Father: {fileID: 1145933738}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &720627664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706885, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241255649020706887, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f625eea222db6e42be83dc860e0a0b8, type: 3}
 --- !u!1 &725312320
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,78 +6246,3 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!1 &2143425418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2143425420}
-  - component: {fileID: 2143425419}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2143425419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143425418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69aa28177a91eb4297fbef786b7fc9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsGlobal: 1
-  sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 20d92434d65705043a7ba38bd600cce7, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: WIndHatch
-    clip: {fileID: 8300000, guid: e27238d05d1da6b41bc2db475f4dce0e, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: GemCollect
-    clip: {fileID: 8300000, guid: 673cb22275c0c0f41b555270d91e3cbf, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: WindOn?Off
-    clip: {fileID: 8300000, guid: 7e3e5df2cba9d304fbffc6ada4dc8d64, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: DoorOpen
-    clip: {fileID: 8300000, guid: d55d27863f6c07f4fac4f97e7b6ae374, type: 3}
-    volume: 100
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &2143425420
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143425418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
