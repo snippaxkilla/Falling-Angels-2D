@@ -9,13 +9,13 @@ public class LevelSelectorManager : MonoBehaviour
     {
         if (!Application.CanStreamedLevelBeLoaded($"Level{level}"))
         {
-            GoToMainMenu();
+            GoToLevelSelector();
             return;
         }
 
         //which level needs to have the ui added, because we don't want the system to randomly add them too all to increase performance
         LevelManager.Level = level;
-        SceneManager.LoadScene($"Level{level}");
+        SceneManager.LoadScene($"Scenes/Included levels/Level{level}");
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
         Timer.Instance.InitialStartLevel();
 
@@ -27,9 +27,8 @@ public class LevelSelectorManager : MonoBehaviour
         AnalyticsService.Instance.CustomData("LevelStarted", parameters);
     }
 
-    //main menu is indexed as 1
-    public void GoToMainMenu()
+    public void GoToLevelSelector()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("LevelSelector");
     }
 }

@@ -1,4 +1,6 @@
+using Unity.Services.Core;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -10,10 +12,12 @@ public class StartGame : MonoBehaviour
     public Button button;
 
     //getting components
-    void Start()
+    async void Start()
     {
         SpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         button.onClick.AddListener(Task);
+        await UnityServices.InitializeAsync();
+        Analytics.ResumeInitialization();
     }
 
 

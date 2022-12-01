@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Unity.Services.Analytics;
 using UnityEngine;
 using UnityEngine.Analytics;
@@ -108,7 +110,18 @@ public class DevilBehaviour : MonoBehaviour
 
             };
 
-            AnalyticsService.Instance.CustomData("LevelCompleted", parameters);
+            try
+            {
+                AnalyticsService.Instance.CustomData("LevelCompleted", parameters);
+            }
+            catch (Exception e)
+            {
+                string filePath = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                    "error.txt");
+                using var writer = File.CreateText(filePath);
+                writer.WriteLine(e.Message);
+            }
 
             FindObjectOfType<LevelLoader>().StartLoadWinTransition();
 
@@ -146,6 +159,5 @@ public class DevilBehaviour : MonoBehaviour
         TotalDeathCount.Instance.Death();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         TallyManager.Reset();
-
     }
 }

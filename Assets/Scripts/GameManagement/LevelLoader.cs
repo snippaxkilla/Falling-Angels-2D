@@ -23,7 +23,7 @@ public class LevelLoader : MonoBehaviour
 
         LevelManager.Level = levelIndex;
         TallyManager.Reset();
-        SceneManager.LoadScene("Level" + levelIndex);
+        SceneManager.LoadScene("Scenes/Included levels/Level" + levelIndex);
         Timer.Instance.InitialStartLevel();
 
         Dictionary<string, object> parameters = new Dictionary<string, object>()
